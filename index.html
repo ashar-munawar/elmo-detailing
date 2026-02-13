@@ -122,29 +122,31 @@
             </div>
         </div>
     </nav>
-    <header class="relative overflow-hidden pt-12 pb-20 lg:pt-24 lg:pb-32">
-        <div class="container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
-            <div class="relative z-10 space-y-8">
+    <header
+        class="relative overflow-hidden pt-32 pb-32 lg:pt-48 lg:pb-48 bg-[url('./photos/mclaren.jpeg')] bg-cover bg-center bg-no-repeat bg-fixed">
+        <div class="absolute inset-0 bg-black/70 z-0"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-3xl">
                 <div
                     class="inline-flex items-center gap-2 text-primary uppercase font-bold text-xs tracking-[0.2em] border-b border-primary pb-1">
                     Welcome to Elmo's Auto Detailing
                 </div>
-                <h1 class="text-5xl lg:text-7xl font-extrabold leading-tight text-text-light dark:text-white">
+                <h1 class="text-5xl lg:text-7xl font-extrabold leading-tight text-white mt-8 mb-6">
                     Where <span
                         class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-hover">Every
                         Detail</span> Matter
                 </h1>
-                <p class="text-lg text-muted-light dark:text-muted-dark max-w-lg leading-relaxed">
+                <p class="text-xl text-gray-200 max-w-lg leading-relaxed mb-10">
                     Mobile service — we come to you. Interior • Exterior • Full Detail.
                 </p>
-                <div class="flex flex-col sm:flex-row gap-6 items-start sm:items-center pt-4">
+                <div class="flex flex-col sm:flex-row gap-6 items-start sm:items-center">
                     <a class="px-8 py-4 bg-primary text-white font-bold uppercase tracking-widest rounded shadow-xl shadow-primary/20 hover:bg-primary-hover transition transform hover:-translate-y-1"
                         href="#contact">
                         Book Detailing
                     </a>
                     <div class="flex items-center gap-3">
-                        <div class="text-3xl font-bold text-text-light dark:text-white">4.8</div>
-                        <div class="flex flex-col text-xs text-muted-light dark:text-muted-dark">
+                        <div class="text-3xl font-bold text-white">4.8</div>
+                        <div class="flex flex-col text-xs text-gray-300">
                             <div class="flex text-yellow-500 mb-1">
                                 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
                                     class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
@@ -154,28 +156,6 @@
                     </div>
                 </div>
             </div>
-            <div class="relative z-10">
-                <div
-                    class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-surface-light dark:border-gray-800 transform rotate-2 hover:rotate-0 transition duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-tr from-black/60 to-transparent z-10"></div>
-                    <img alt="Car Detailing Red Car" class="w-full h-full object-cover min-h-[500px]"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTslAF6a4JRmOcB5WgRTi2hgVyFQDpbMG0YnfgHEbi3JZxpND8podqb4DrxFpy4-nCQNh9p0vKNRxx7jbarm6zh1oyzsPVhRAXkH9cG9v39GQ0UyVJx5zCRPLLBFRagAv4tmTrPqPkPEXbYW2s8Cs9fCgCW-YNFZwES6bNbfaIx91rQ-SaUsunu9hTpUUHOtsacoXQqxgpEABPN9shpCL98DKqMgyg0WKF27YqnU2sqHsQt0Yne7nEJbTXFLIxeiQP3Y5xI8IW7MjM" />
-                    <div
-                        class="absolute bottom-8 right-8 z-20 bg-background-light dark:bg-surface-dark p-4 rounded-lg shadow-lg flex items-center gap-3 border-l-4 border-primary">
-                        <div class="bg-primary/10 p-3 rounded-full text-primary">
-                            <i class="fas fa-shield-alt text-xl"></i>
-                        </div>
-                        <div>
-                            <div class="text-xs text-muted-light dark:text-muted-dark uppercase tracking-wider">Top
-                                Rated</div>
-                            <div class="font-bold text-sm">Paint Protection</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div
-            class="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-surface-light dark:from-surface-dark to-transparent opacity-50 -z-0">
         </div>
     </header>
     <section class="py-20 bg-surface-light dark:bg-surface-dark" id="services">
@@ -312,35 +292,14 @@
             </div>
         </div>
     </section>
-    <div class="py-12 bg-background-dark border-y border-gray-800">
-        <div class="container mx-auto px-6 overflow-hidden">
-            <div
-                class="flex justify-between items-center opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition duration-500 gap-8 overflow-x-auto">
-                <i class="fab fa-battle-net text-5xl text-white"></i>
-                <i class="fab fa-canadian-maple-leaf text-5xl text-white"></i>
-                <i class="fas fa-crown text-5xl text-white"></i>
-                <i class="fab fa-wolf-pack-battalion text-5xl text-white"></i>
-                <div class="text-3xl font-bold text-white tracking-widest uppercase">Lexus</div>
-                <div class="text-3xl font-bold text-white tracking-widest uppercase italic">Mazda</div>
-            </div>
-        </div>
-    </div>
+
     <section class="py-20 bg-background-light dark:bg-background-dark overflow-hidden" id="about">
         <div class="container mx-auto px-6">
             <div class="grid lg:grid-cols-2 gap-16 items-center">
-                <div class="relative min-h-[500px]">
-                    <div
-                        class="absolute top-0 left-0 w-3/4 h-3/4 rounded-2xl overflow-hidden shadow-2xl border-4 border-surface-light dark:border-surface-dark z-10">
-                        <img alt="Worker" class="w-full h-full object-cover"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhI6Ig0ciYupxyWw5NV1Kp-UDFgbtFvQByff1RJ6ciOzRc9PoMY0SmW0IkkrfXDrn5nRt85FH3rRN9DMEr7_Gkw3FGvdeOBwN_Rzqz1OCaRzDh2fuB3ehY4z0bL3AL-sVG2NnQZAp0rK3FSViFzx4NUCzRPalYY8uDQ4UwTEeNF8Ta9_GlHPWh123OV2C0MfAZMyyXcc1g10y1j9CKU5m7TzlFLpm2Z1uZsZqDA5vGxWN6vG4Vz0xVe3dcBCUI1gGJSjfrFZLRR9Cu" />
-                    </div>
-                    <div
-                        class="absolute bottom-0 right-0 w-3/4 h-3/4 rounded-2xl overflow-hidden shadow-2xl border-4 border-surface-light dark:border-surface-dark z-20">
-                        <img alt="Detailing Process" class="w-full h-full object-cover"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSNVpkHg0R7b7UU3NQc_kt2dSMsksv6ve3NUjlh02gK2B9T587DelHLWOyERlYWuXhfLBqjjAg-TAHtzEuI99JMMbo8tRjb5Ba2oNxPosBRbWf9R2DX9KUXrYxGJtqWSjG_QkK9x7FzQhJJS7f9_T1ZJfdthg7MLAYcr3YSpeZcvY-Aya1sBSfIjxsYo6bO-dzC6BAlhw-VY-i220sJ2som8aOvGGBMn6H0pjnW0Q6MKx7k8I1WT7yUJXjcKKNtsNgIXwJWAgNK15u" />
-                    </div>
-                    <div
-                        class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-primary/5 rounded-full blur-3xl -z-0">
+                <div class="relative min-h-[500px] h-full rounded-2xl overflow-hidden shadow-2xl">
+                    <img alt="Car Being Detailed" class="w-full h-full object-cover"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDksMeJX24uq-r5x07jMJEFV1WcJVrRdzr6rFx1mUR4S5R73HtTExHuyRJENFmNRf8uHQqsnCpMT-Z8g12IzD84FnkijVxJvTECmj2zYxgilBx44ZhQRnyOEPvdbrUHXh1wkT_C0_kFsgh8bLfp3Til6DZd-hD1_fnjvGYhB-Dr5WdAeTOQQnRNQmaiu-3it2WrbLNt_xQNUkEUq2QoI0rQuPiTj5xRv_kG01mOlnf3yVd_DD630ofq-_cT_8sXspju22HqnWkZKl8C" />
+                    <div class="absolute inset-0 bg-primary/10 mix-blend-overlay">
                     </div>
                 </div>
                 <div class="space-y-8">
