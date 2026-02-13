@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Elmo's Auto Detailing - Premium Mobile Service</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#FCBF65", // Gold/Orange
+                        "primary-hover": "#FCCD75", // Ligher shade
+                        "background-light": "#FFFFFF",
+                        "background-dark": "#0B0B0B", // Deep black
+                        "surface-light": "#F3F4F6",
+                        "surface-dark": "#161616", // Dark gray for cards
+                        "text-light": "#1F2937",
+                        "text-dark": "#E5E7EB",
+                        "muted-light": "#6B7280",
+                        "muted-dark": "#9CA3AF",
+                    },
+                    fontFamily: {
+                        display: ["Manrope", "sans-serif"],
+                        body: ["Manrope", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                        'xl': '1rem',
+                    },
+                    backgroundImage: {
+                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                    }
+                },
+            },
+        };
+    </script>
+    <style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #111;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #333;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #D90429;
+        }
+
+        .text-stroke {
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark transition-colors duration-300">
+    <div
+        class="bg-surface-light dark:bg-surface-dark border-b border-gray-200 dark:border-gray-800 text-xs py-2 hidden md:block">
+        <div class="container mx-auto px-6 flex justify-between items-center text-muted-light dark:text-muted-dark">
+            <div class="flex gap-6">
+                <span><i class="fas fa-map-marker-alt mr-2 text-primary"></i> Newburgh, NY & (surrounding area)</span>
+                <span><i class="fas fa-phone mr-2 text-primary"></i> 845-597-0995</span>
+            </div>
+            <div class="flex gap-4">
+                <a class="hover:text-primary transition" href="#"><i class="fab fa-facebook-f"></i></a>
+                <a class="hover:text-primary transition" href="#"><i class="fab fa-instagram"></i></a>
+                <a class="hover:text-primary transition" href="mailto:theclassicdetailers@gmail.com"><i
+                        class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </div>
+    <nav
+        class="sticky top-0 z-50 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a class="flex items-center gap-2 group" href="#">
+                <img src="elmo logo (1).jpg" alt="Elmo's Auto Detailing"
+                    class="w-12 h-12 object-contain transform group-hover:scale-110 transition-transform rounded-full">
+                <div class="flex flex-col">
+                    <span class="font-bold text-xl leading-none uppercase tracking-wide">Elmo's</span>
+                    <span class="text-xs text-primary font-bold uppercase tracking-[0.2em]">Auto Detailing</span>
+                </div>
+            </a>
+            <ul class="hidden md:flex items-center gap-8 text-sm font-medium uppercase tracking-wide">
+                <li><a class="text-primary" href="#">Home</a></li>
+                <li><a class="hover:text-primary transition" href="#services">Services</a></li>
+                <li><a class="hover:text-primary transition" href="#about">About</a></li>
+                <li><a class="hover:text-primary transition" href="#gallery">Gallery</a></li>
+                <li><a class="hover:text-primary transition" href="#contact">Contact</a></li>
+            </ul>
+            <div class="flex items-center gap-4">
+                <button class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition"
+                    onclick="document.documentElement.classList.toggle('dark')">
+                    <i class="fas fa-moon dark:hidden text-gray-600"></i>
+                    <i class="fas fa-sun hidden dark:block text-yellow-400"></i>
+                </button>
+                <a class="hidden md:inline-block px-6 py-2.5 bg-primary text-white text-sm font-bold uppercase tracking-wider rounded hover:bg-primary-hover transition shadow-lg shadow-primary/30"
+                    href="#contact">
+                    Make Appointment
+                </a>
+                <button class="md:hidden text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <header class="relative overflow-hidden pt-12 pb-20 lg:pt-24 lg:pb-32">
+        <div class="container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+            <div class="relative z-10 space-y-8">
+                <div
+                    class="inline-flex items-center gap-2 text-primary uppercase font-bold text-xs tracking-[0.2em] border-b border-primary pb-1">
+                    Welcome to Elmo's Auto Detailing
+                </div>
+                <h1 class="text-5xl lg:text-7xl font-extrabold leading-tight text-text-light dark:text-white">
+                    Where <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-hover">Every
+                        Detail</span> Matter
+                </h1>
+                <p class="text-lg text-muted-light dark:text-muted-dark max-w-lg leading-relaxed">
+                    Mobile service — we come to you. Interior • Exterior • Full Detail.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-6 items-start sm:items-center pt-4">
+                    <a class="px-8 py-4 bg-primary text-white font-bold uppercase tracking-widest rounded shadow-xl shadow-primary/20 hover:bg-primary-hover transition transform hover:-translate-y-1"
+                        href="#contact">
+                        Book Detailing
+                    </a>
+                    <div class="flex items-center gap-3">
+                        <div class="text-3xl font-bold text-text-light dark:text-white">4.8</div>
+                        <div class="flex flex-col text-xs text-muted-light dark:text-muted-dark">
+                            <div class="flex text-yellow-500 mb-1">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span>Based on customer reviews</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="relative z-10">
+                <div
+                    class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-surface-light dark:border-gray-800 transform rotate-2 hover:rotate-0 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-black/60 to-transparent z-10"></div>
+                    <img alt="Car Detailing Red Car" class="w-full h-full object-cover min-h-[500px]"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTslAF6a4JRmOcB5WgRTi2hgVyFQDpbMG0YnfgHEbi3JZxpND8podqb4DrxFpy4-nCQNh9p0vKNRxx7jbarm6zh1oyzsPVhRAXkH9cG9v39GQ0UyVJx5zCRPLLBFRagAv4tmTrPqPkPEXbYW2s8Cs9fCgCW-YNFZwES6bNbfaIx91rQ-SaUsunu9hTpUUHOtsacoXQqxgpEABPN9shpCL98DKqMgyg0WKF27YqnU2sqHsQt0Yne7nEJbTXFLIxeiQP3Y5xI8IW7MjM" />
+                    <div
+                        class="absolute bottom-8 right-8 z-20 bg-background-light dark:bg-surface-dark p-4 rounded-lg shadow-lg flex items-center gap-3 border-l-4 border-primary">
+                        <div class="bg-primary/10 p-3 rounded-full text-primary">
+                            <i class="fas fa-shield-alt text-xl"></i>
+                        </div>
+                        <div>
+                            <div class="text-xs text-muted-light dark:text-muted-dark uppercase tracking-wider">Top
+                                Rated</div>
+                            <div class="font-bold text-sm">Paint Protection</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div
+            class="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-surface-light dark:from-surface-dark to-transparent opacity-50 -z-0">
+        </div>
+    </header>
+    <section class="py-20 bg-surface-light dark:bg-surface-dark" id="services">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-primary uppercase font-bold text-xs tracking-[0.2em]">Our Expertise</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">Premium Car Detailing</h2>
+                <p class="text-muted-light dark:text-muted-dark">
+                    From deep interior cleaning to long-lasting ceramic coating, we restore and protect your vehicle
+                    with precision, care, and a commitment to perfection.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div
+                    class="group relative bg-background-light dark:bg-background-dark rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition flex flex-col sm:flex-row h-full">
+                    <div class="p-8 flex-1 flex flex-col justify-center relative">
+                        <span
+                            class="absolute top-4 left-6 text-6xl font-black text-gray-200 dark:text-gray-800/50 -z-0 select-none">01</span>
+                        <h3 class="text-xl font-bold mb-3 relative z-10">Exterior Hand Wash &amp; Wax</h3>
+                        <p class="text-sm text-muted-light dark:text-muted-dark leading-relaxed relative z-10">
+                            Gentle hand washing and premium wax application for a glossy, protective finish that brings
+                            your car's exterior to life.
+                        </p>
+                    </div>
+                    <div class="w-full sm:w-2/5 h-48 sm:h-auto relative overflow-hidden">
+                        <div
+                            class="absolute inset-0 bg-primary/20 mix-blend-overlay group-hover:bg-transparent transition">
+                        </div>
+                        <img alt="Hand Wash"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD35x6Kk4e1Xbnld0ZydF983HScp1hlxbO_X0T9aWn5kRg8MIDYrXZUcO6yesf9oLIce98tuFsyr3rEDJwK9kYPOiZqm4kbbhJgMuO4f1_jtE8FFpUc8mtnieCtKRdSeIE_yHW0DoxZ1zblzEsWE6oHMHMVt6cNQklj2tqp6vXYXcsukVvKap_F9zSgX-z6Kzsic8ZgYFW1aCdnH3q5bnUjrhtDTapdEtQvzBw2yZpnvCC2maObrMojHkqKEzeKOadr4A5xvD8LoUXI" />
+                    </div>
+                </div>
+                <div
+                    class="group relative bg-background-light dark:bg-background-dark rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition flex flex-col sm:flex-row h-full">
+                    <div class="p-8 flex-1 flex flex-col justify-center relative">
+                        <span
+                            class="absolute top-4 left-6 text-6xl font-black text-gray-200 dark:text-gray-800/50 -z-0 select-none">02</span>
+                        <h3 class="text-xl font-bold mb-3 relative z-10">Interior Deep Cleaning</h3>
+                        <p class="text-sm text-muted-light dark:text-muted-dark leading-relaxed relative z-10">
+                            Thorough vacuuming, shampooing, and sanitizing to remove dirt, stains, and odors from seats,
+                            carpets, and upholstery.
+                        </p>
+                    </div>
+                    <div class="w-full sm:w-2/5 h-48 sm:h-auto relative overflow-hidden">
+                        <div
+                            class="absolute inset-0 bg-primary/20 mix-blend-overlay group-hover:bg-transparent transition">
+                        </div>
+                        <img alt="Interior Cleaning"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlIrwUe_02l99GiBoGizxqOTbpo9PqyW3uNFWwxrE6ZFLdt3LAQRBEFaGqiiJRzxetrcTs1gqJZZN-l7OY5vOysfIEn4zytFG1bDRpFbWxb7JVvUIdGjTOw2ffGaOkLJ_QEh16aFdvXGMc8uo1i-ddZf6QmZ_BscYMTaMNaxJj4FhoSIRGBdB3Bk9xrzaB5w3t_FbITC94HvXdGwU5nBJot4j7EN1SJb2CLtj3zjfw1cJZ1nDK0Vw9owbSbpvrqWfgGX11x7ZkwDOd" />
+                    </div>
+                </div>
+                <div
+                    class="group relative bg-background-light dark:bg-background-dark rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition flex flex-col sm:flex-row h-full">
+                    <div class="p-8 flex-1 flex flex-col justify-center relative">
+                        <span
+                            class="absolute top-4 left-6 text-6xl font-black text-gray-200 dark:text-gray-800/50 -z-0 select-none">03</span>
+                        <h3 class="text-xl font-bold mb-3 relative z-10">Paint Correction</h3>
+                        <p class="text-sm text-muted-light dark:text-muted-dark leading-relaxed relative z-10">
+                            Eliminates swirls, oxidation, and light scratches for a flawless finish and like-new paint
+                            clarity.
+                        </p>
+                    </div>
+                    <div class="w-full sm:w-2/5 h-48 sm:h-auto relative overflow-hidden">
+                        <div
+                            class="absolute inset-0 bg-primary/20 mix-blend-overlay group-hover:bg-transparent transition">
+                        </div>
+                        <img alt="Paint Correction"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDksMeJX24uq-r5x07jMJEFV1WcJVrRdzr6rFx1mUR4S5R73HtTExHuyRJENFmNRf8uHQqsnCpMT-Z8g12IzD84FnkijVxJvTECmj2zYxgilBx44ZhQRnyOEPvdbrUHXh1wkT_C0_kFsgh8bLfp3Til6DZd-hD1_fnjvGYhB-Dr5WdAeTOQQnRNQmaiu-3it2WrbLNt_xQNUkEUq2QoI0rQuPiTj5xRv_kG01mOlnf3yVd_DD630ofq-_cT_8sXspju22HqnWkZKl8C" />
+                    </div>
+                </div>
+                <div
+                    class="group relative bg-background-light dark:bg-background-dark rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition flex flex-col sm:flex-row h-full">
+                    <div class="p-8 flex-1 flex flex-col justify-center relative">
+                        <span
+                            class="absolute top-4 left-6 text-6xl font-black text-gray-200 dark:text-gray-800/50 -z-0 select-none">04</span>
+                        <h3 class="text-xl font-bold mb-3 relative z-10">Ceramic Coating</h3>
+                        <p class="text-sm text-muted-light dark:text-muted-dark leading-relaxed relative z-10">
+                            Advanced ceramic protection to shield your paint from the elements while enhancing shine and
+                            hydrophobic properties.
+                        </p>
+                    </div>
+                    <div class="w-full sm:w-2/5 h-48 sm:h-auto relative overflow-hidden">
+                        <div
+                            class="absolute inset-0 bg-primary/20 mix-blend-overlay group-hover:bg-transparent transition">
+                        </div>
+                        <img alt="Ceramic Coating"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLIGWH08eJIT7veIQ_17mglw7t5QsLj7n_OCYEKSmwqwAPCSzioQ8UoCxbdc36LxyHoVUyo4ycP9nqe7yGAYuNLtiVG1YYa60rZ2hr29PbPJfi3YqdsHffLNJB9rs0ga3qiuPdHPnOr2AgRhfBmILpr4S-5M0r5Xtqvr00TpcG-MLhAkoE0MyJS-H7pP1Bzv8Z3UfWnHpxG1CFKU8C-I2SrJRn-cfDgOrkrG5FA9Mh7EOl_8GApd3dGsmvM_9-zJmWgZRs8UodUTD7" />
+                    </div>
+                </div>
+                <div
+                    class="group relative bg-background-light dark:bg-background-dark rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition flex flex-col sm:flex-row h-full">
+                    <div class="p-8 flex-1 flex flex-col justify-center relative">
+                        <span
+                            class="absolute top-4 left-6 text-6xl font-black text-gray-200 dark:text-gray-800/50 -z-0 select-none">05</span>
+                        <h3 class="text-xl font-bold mb-3 relative z-10">Engine Bay Detailing</h3>
+                        <p class="text-sm text-muted-light dark:text-muted-dark leading-relaxed relative z-10">
+                            Careful degreasing and cleaning of your engine bay to restore appearance and prevent dirt
+                            buildup.
+                        </p>
+                    </div>
+                    <div class="w-full sm:w-2/5 h-48 sm:h-auto relative overflow-hidden">
+                        <div
+                            class="absolute inset-0 bg-primary/20 mix-blend-overlay group-hover:bg-transparent transition">
+                        </div>
+                        <img alt="Engine Bay"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYbv5u3aIbh8bxussWaG_23PKK-B49wY0Y-m8uLTSG6Sq3zX80XP3R05WSdMO14JOhbk_xA9zV37v99yOB127MOi0-F55YmIj5LHl1fef4eu70TgxQJrLNP4MK4xUexLh3jOhO6sXwErrm8A3JUCyTJn9CMTClsLT7PegqpwhEUqQUMyxPj8Y3oJCpm5BvL9z31aN8cQUNy7WG_VxviiGPkpc3t8UJhqrru-S8jsMA4qu2ip6c-VVVMLgSSXde8l-4ia7tL9zZ1Jlw" />
+                    </div>
+                </div>
+                <div
+                    class="group relative bg-background-light dark:bg-background-dark rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition flex flex-col sm:flex-row h-full">
+                    <div class="p-8 flex-1 flex flex-col justify-center relative">
+                        <span
+                            class="absolute top-4 left-6 text-6xl font-black text-gray-200 dark:text-gray-800/50 -z-0 select-none">06</span>
+                        <h3 class="text-xl font-bold mb-3 relative z-10">Headlight Restoration</h3>
+                        <p class="text-sm text-muted-light dark:text-muted-dark leading-relaxed relative z-10">
+                            Restores clarity and improves visibility by removing haze, oxidation, and yellowing from
+                            headlight lenses.
+                        </p>
+                    </div>
+                    <div class="w-full sm:w-2/5 h-48 sm:h-auto relative overflow-hidden">
+                        <div
+                            class="absolute inset-0 bg-primary/20 mix-blend-overlay group-hover:bg-transparent transition">
+                        </div>
+                        <img alt="Headlight"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDu1wGr3UKfOrRUoZ877yyln3ltUddthjifE8ZJE5IPIjio0FIMNXSfU_c_nQCrC4BJ4rKJkNnn9pS_esj-bw3hKmm1qYeaNlmHqjFCs_xXOKUeuctnZykF13dnDTz9tUfqZp8IhPaQk4bmAbxLLvx6qhYEpsUWou7ignuCCOMxITRvKBc2Vag-lmSMKgoYzesqsrowTnF89jyPEIMHylgGywoNpeZrfe1scVHGCogsJVFD0r8xEk2v0RRsjs7FTEOeirO3Ant9BpI2" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="py-12 bg-background-dark border-y border-gray-800">
+        <div class="container mx-auto px-6 overflow-hidden">
+            <div
+                class="flex justify-between items-center opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition duration-500 gap-8 overflow-x-auto">
+                <i class="fab fa-battle-net text-5xl text-white"></i>
+                <i class="fab fa-canadian-maple-leaf text-5xl text-white"></i>
+                <i class="fas fa-crown text-5xl text-white"></i>
+                <i class="fab fa-wolf-pack-battalion text-5xl text-white"></i>
+                <div class="text-3xl font-bold text-white tracking-widest uppercase">Lexus</div>
+                <div class="text-3xl font-bold text-white tracking-widest uppercase italic">Mazda</div>
+            </div>
+        </div>
+    </div>
+    <section class="py-20 bg-background-light dark:bg-background-dark overflow-hidden" id="about">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="relative min-h-[500px]">
+                    <div
+                        class="absolute top-0 left-0 w-3/4 h-3/4 rounded-2xl overflow-hidden shadow-2xl border-4 border-surface-light dark:border-surface-dark z-10">
+                        <img alt="Worker" class="w-full h-full object-cover"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhI6Ig0ciYupxyWw5NV1Kp-UDFgbtFvQByff1RJ6ciOzRc9PoMY0SmW0IkkrfXDrn5nRt85FH3rRN9DMEr7_Gkw3FGvdeOBwN_Rzqz1OCaRzDh2fuB3ehY4z0bL3AL-sVG2NnQZAp0rK3FSViFzx4NUCzRPalYY8uDQ4UwTEeNF8Ta9_GlHPWh123OV2C0MfAZMyyXcc1g10y1j9CKU5m7TzlFLpm2Z1uZsZqDA5vGxWN6vG4Vz0xVe3dcBCUI1gGJSjfrFZLRR9Cu" />
+                    </div>
+                    <div
+                        class="absolute bottom-0 right-0 w-3/4 h-3/4 rounded-2xl overflow-hidden shadow-2xl border-4 border-surface-light dark:border-surface-dark z-20">
+                        <img alt="Detailing Process" class="w-full h-full object-cover"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSNVpkHg0R7b7UU3NQc_kt2dSMsksv6ve3NUjlh02gK2B9T587DelHLWOyERlYWuXhfLBqjjAg-TAHtzEuI99JMMbo8tRjb5Ba2oNxPosBRbWf9R2DX9KUXrYxGJtqWSjG_QkK9x7FzQhJJS7f9_T1ZJfdthg7MLAYcr3YSpeZcvY-Aya1sBSfIjxsYo6bO-dzC6BAlhw-VY-i220sJ2som8aOvGGBMn6H0pjnW0Q6MKx7k8I1WT7yUJXjcKKNtsNgIXwJWAgNK15u" />
+                    </div>
+                    <div
+                        class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-primary/5 rounded-full blur-3xl -z-0">
+                    </div>
+                </div>
+                <div class="space-y-8">
+                    <div>
+                        <span class="text-primary uppercase font-bold text-xs tracking-[0.2em] mb-2 block">About Elmo's
+                            Auto Detailing</span>
+                        <h2 class="text-4xl font-bold mb-6">Restoring Lasting Shine, <br />Inside and Out</h2>
+                        <p class="text-muted-light dark:text-muted-dark leading-relaxed">
+                            At Elmo's Auto Detailing, we’re passionate about making every vehicle look its absolute
+                            best—inside and out. From restoring showroom-level gloss to deep-cleaning interiors, our
+                            expert team delivers flawless results with care and precision in Newburgh & surrounding
+                            areas.
+                        </p>
+                    </div>
+                    <a class="inline-block px-8 py-3 bg-primary text-white text-sm font-bold uppercase rounded hover:bg-primary-hover transition"
+                        href="#contact">Read More</a>
+                    <div
+                        class="grid grid-cols-2 md:grid-cols-4 gap-8 pt-8 border-t border-gray-200 dark:border-gray-800">
+                        <div class="text-center">
+                            <div class="text-primary text-2xl mb-2"><i class="fas fa-briefcase"></i></div>
+                            <div class="text-2xl font-bold">1200+</div>
+                            <div class="text-xs text-muted-light dark:text-muted-dark uppercase tracking-wide">Jobs Done
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-primary text-2xl mb-2"><i class="fas fa-thumbs-up"></i></div>
+                            <div class="text-2xl font-bold">950+</div>
+                            <div class="text-xs text-muted-light dark:text-muted-dark uppercase tracking-wide">Happy
+                                Clients</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-primary text-2xl mb-2"><i class="fas fa-users"></i></div>
+                            <div class="text-2xl font-bold">10+</div>
+                            <div class="text-xs text-muted-light dark:text-muted-dark uppercase tracking-wide">Experts
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-primary text-2xl mb-2"><i class="fas fa-award"></i></div>
+                            <div class="text-2xl font-bold">5+</div>
+                            <div class="text-xs text-muted-light dark:text-muted-dark uppercase tracking-wide">Years
+                                Exp.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-20 bg-surface-light dark:bg-surface-dark">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-3 gap-12 items-start">
+                <div class="lg:col-span-1">
+                    <span class="text-primary uppercase font-bold text-xs tracking-[0.2em]">Testimonials</span>
+                    <h2 class="text-4xl font-bold mt-2 mb-6">What They Say</h2>
+                    <p class="text-muted-light dark:text-muted-dark mb-8">
+                        Don't just take our word for it. See what our valued customers have to say about their
+                        experience with Classic Detailers.
+                    </p>
+                    <div class="flex gap-2">
+                        <div class="h-2 w-8 bg-primary rounded-full"></div>
+                        <div class="h-2 w-2 bg-gray-300 dark:bg-gray-700 rounded-full"></div>
+                        <div class="h-2 w-2 bg-gray-300 dark:bg-gray-700 rounded-full"></div>
+                    </div>
+                </div>
+                <div class="lg:col-span-2 grid md:grid-cols-2 gap-6">
+                    <div
+                        class="bg-background-light dark:bg-background-dark p-8 rounded-xl shadow-lg border border-gray-100 dark:border-gray-800">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="flex items-center gap-3">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-gray-300 bg-[url('https://randomuser.me/api/portraits/men/32.jpg')] bg-cover">
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-sm">John Smith</h4>
+                                    <div class="text-xs text-muted-light dark:text-muted-dark">22 Dec 2024</div>
+                                </div>
+                            </div>
+                            <div class="w-5 h-5 flex items-center justify-center bg-white rounded-full p-1">
+                                <img alt="Google"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZ2cA5yZwfsZxrBvRtbl73oyqFE7fNIRyQGUuZjXKk7R710I_YJ-P-EeHK5pzriNHZp_W6mvO0HKbAFM7S4LpbRcXHtYWOJAzJBgQRl2tbzWuyrk7MSBskOeIIO622KNWl6HsUKPg2KgoBqqNT-tvhvwQVaEoeYb_rjRLiUYSZnATbXyAMXHmbT9y1oA5itdSENeQ35KU4Q4LTXwtKpJiumJNe0gljdWNimiNWjs-lROO2oOnEXeTFQmhwWEqltGPSg7mwrb0O_lIR" />
+                            </div>
+                        </div>
+                        <div class="text-yellow-500 text-xs mb-3 flex gap-1">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-sm text-muted-light dark:text-muted-dark leading-relaxed">
+                            "Interior deep clean was amazing! All the stains and pet hair are gone. The car smells so
+                            fresh now. Highly recommended."
+                        </p>
+                    </div>
+                    <div
+                        class="bg-background-light dark:bg-background-dark p-8 rounded-xl shadow-lg border border-gray-100 dark:border-gray-800">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="flex items-center gap-3">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-gray-300 bg-[url('https://randomuser.me/api/portraits/women/44.jpg')] bg-cover">
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-sm">Jessica Lee</h4>
+                                    <div class="text-xs text-muted-light dark:text-muted-dark">20 Dec 2024</div>
+                                </div>
+                            </div>
+                            <div class="w-5 h-5 flex items-center justify-center bg-white rounded-full p-1">
+                                <img alt="Google"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBas6eCFwMWxcJ32_IDWBS8YoL60gogf4dKop_ScUQsdQrCpcSVfFxhtPyNQHZmvPPAoheQhM1HqliSx17QkS7yzkFJhe8dY8aJyCqrKawvHDY_ULBwSHbT6VbAVoI5u0KWDdw5ss674vwZwKj-LLED_FfsT80mPlJ9C-3hNsnAKxcNfnwV7Amwioki--1nj-mrBAFGQUevN2iju2Un9d6hCDGtz5NBOPsZhhXdEsPobpztWbp_9bpMDKsSqaFBDWZPFC1FbWVmSM4g" />
+                            </div>
+                        </div>
+                        <div class="text-yellow-500 text-xs mb-3 flex gap-1">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-sm text-muted-light dark:text-muted-dark leading-relaxed">
+                            "My car looked brand new after their full detail service. Every inch was spotless! Great
+                            attention to detail and friendly staff."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="bg-primary py-12">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <h2 class="text-2xl md:text-3xl font-bold text-white text-center md:text-left">
+                Want your car to shine like new again?
+            </h2>
+            <a class="px-8 py-3 bg-white text-primary font-bold rounded shadow-lg hover:bg-gray-100 transition whitespace-nowrap"
+                href="#contact">
+                Make Appointment
+            </a>
+        </div>
+    </div>
+    <section class="py-20 bg-background-light dark:bg-background-dark">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-primary uppercase font-bold text-xs tracking-[0.2em]">Trusted &amp; Affordable</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2">Why Choose Our Car Detailing?</h2>
+                <p class="text-muted-light dark:text-muted-dark mt-4 max-w-2xl mx-auto">
+                    From deep interior cleaning to long-lasting ceramic coating, we restore and protect your vehicle.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div
+                    class="p-6 bg-surface-light dark:bg-surface-dark rounded-xl border border-gray-100 dark:border-gray-800">
+                    <h3 class="font-bold text-lg mb-2">Expert Technicians</h3>
+                    <p class="text-sm text-muted-light dark:text-muted-dark">Our detailers are skilled professionals
+                        with years of experience in car care.</p>
+                </div>
+                <div
+                    class="p-6 bg-surface-light dark:bg-surface-dark rounded-xl border border-gray-100 dark:border-gray-800">
+                    <h3 class="font-bold text-lg mb-2">Tailored Packages</h3>
+                    <p class="text-sm text-muted-light dark:text-muted-dark">Detailing options customized to your car's
+                        condition and your preferences.</p>
+                </div>
+                <div
+                    class="p-6 bg-surface-light dark:bg-surface-dark rounded-xl border border-gray-100 dark:border-gray-800">
+                    <h3 class="font-bold text-lg mb-2">Affordable Pricing</h3>
+                    <p class="text-sm text-muted-light dark:text-muted-dark">Competitive rates with no hidden fees -
+                        quality service that fits your budget.</p>
+                </div>
+                <div
+                    class="p-6 bg-surface-light dark:bg-surface-dark rounded-xl border border-gray-100 dark:border-gray-800">
+                    <h3 class="font-bold text-lg mb-2">Aftercare Support</h3>
+                    <p class="text-sm text-muted-light dark:text-muted-dark">We provide post-service tips and care
+                        advice to keep your car looking sharp.</p>
+                </div>
+            </div>
+            <div class="mt-16 rounded-xl overflow-hidden shadow-2xl relative h-64 md:h-96">
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-background-light dark:from-background-dark to-transparent z-10">
+                </div>
+                <img alt="Car Dashboard" class="w-full h-full object-cover object-center"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYt0TirAAdalgIW8mJkS5JjaK79NC35qSdaQYe5zHhDhjs48WUhn3yDITTF-LsvPV3yUrL55ygeoFBvXstmezsLJAi3XtEMoRvfkVHhpj5Etd7G_YUkyUX_T8dmpp8Cpq1cip1ny4ky89CVhBg-ccMxhsoZPv40sXiWe5aJhcN-z1TFgNUWsuRcn8lEIxL93A4_OL9V9ckIc3yZqgdgYJZnjKWoPK9XpriplugX7xUjkMM1ZRHlKaj1-GDrc6n0arQzA6zWbc-koc9" />
+            </div>
+        </div>
+    </section>
+    <section class="py-20 bg-surface-light dark:bg-surface-dark border-t border-gray-200 dark:border-gray-800">
+        <div class="container mx-auto px-6 grid lg:grid-cols-2 gap-12">
+            <div>
+                <span class="text-primary uppercase font-bold text-xs tracking-[0.2em] mb-4 block">Everything you need
+                    to know</span>
+                <h2 class="text-4xl font-bold">Frequently Asked Questions</h2>
+            </div>
+            <div class="space-y-4">
+                <details
+                    class="group bg-background-light dark:bg-background-dark p-6 rounded-lg border border-gray-200 dark:border-gray-700 cursor-pointer"
+                    open="">
+                    <summary class="flex justify-between items-center font-bold list-none">
+                        What is car detailing?
+                        <span class="transition group-open:rotate-180"><i
+                                class="fas fa-chevron-down text-sm"></i></span>
+                    </summary>
+                    <p class="text-sm text-muted-light dark:text-muted-dark mt-4 leading-relaxed">
+                        Car detailing is a top-to-bottom thorough cleaning of your vehicle using specialized tools and
+                        products. It involves both interior and exterior cleaning, reconditioning, and finishing to
+                        restore the paintwork and interior.
+                    </p>
+                </details>
+                <details
+                    class="group bg-background-light dark:bg-background-dark p-6 rounded-lg border border-gray-200 dark:border-gray-700 cursor-pointer">
+                    <summary class="flex justify-between items-center font-bold list-none">
+                        How often should I get my car detailed?
+                        <span class="transition group-open:rotate-180"><i
+                                class="fas fa-chevron-down text-sm"></i></span>
+                    </summary>
+                    <p class="text-sm text-muted-light dark:text-muted-dark mt-4 leading-relaxed">
+                        We recommend a full detail every 4-6 months to maintain your vehicle's value and appearance.
+                        Simple washes should be done every 2 weeks.
+                    </p>
+                </details>
+                <details
+                    class="group bg-background-light dark:bg-background-dark p-6 rounded-lg border border-gray-200 dark:border-gray-700 cursor-pointer">
+                    <summary class="flex justify-between items-center font-bold list-none">
+                        What's included in a full detailing service?
+                        <span class="transition group-open:rotate-180"><i
+                                class="fas fa-chevron-down text-sm"></i></span>
+                    </summary>
+                    <p class="text-sm text-muted-light dark:text-muted-dark mt-4 leading-relaxed">
+                        It includes exterior wash, clay bar treatment, polishing/waxing, tire cleaning, interior
+                        vacuuming, shampooing of carpets/seats, dashboard cleaning, and window cleaning.
+                    </p>
+                </details>
+            </div>
+        </div>
+    </section>
+    <section class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 h-48" id="gallery">
+        <div class="relative group h-full overflow-hidden">
+            <img alt="Gallery Image 1" class="w-full h-full object-cover transition duration-500 group-hover:scale-110"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8l70KcKkbE99WItyY3JCtt0UcCua4ITLltJdRf9kdPwYTkb-ZulfMBbKdSo9gBiB9ArMzSyuXrhiLCWLYBMAEyjzOZWZ4YPW8k-lt1f3X6Gpf8P0szT79eZt-4Bu_ffT-3hb9d2lqL5ZgpjM1RCB0JrFbaq1k1CBtB08pE1_T_gBHvelnKr60FZYXau4VkcaLu0hyZqjHZTnzi0NmHVzpLzrHEd7iZyUZagGLZbC-TYtd-kl0L1x9BFfBjviI0unu8UShaAdz58Qt" />
+            <div
+                class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                <i class="fab fa-instagram text-white text-2xl"></i>
+            </div>
+        </div>
+        <div class="relative group h-full overflow-hidden">
+            <img alt="Gallery Image 2" class="w-full h-full object-cover transition duration-500 group-hover:scale-110"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuArCvu4kabREb2IeGTKA_GtTeLrz8-3UaHRGr1BcbwZttqd4kkbo4mHpt86uxf5gJkgPpK77TqBkXxvNh9iF0vmw_Of-o53AGqGd681RU4ZZMu6saESTdBQkTgF3a4WDyb1Rxj2WaC9n6CjdpopZvgByhzv37RliiXzHWUEk3QQquOMHnsOVfjKpxpuoNgm0HRvzqFR3alp5Q17XZArBNuqYtyozJ_VFDCReV3vjsSStSbjSY8NDZAw88i4PLAtx6bxMlBCVbqYzxIr" />
+            <div
+                class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                <i class="fab fa-instagram text-white text-2xl"></i>
+            </div>
+        </div>
+        <div class="relative group h-full overflow-hidden">
+            <img alt="Gallery Image 3" class="w-full h-full object-cover transition duration-500 group-hover:scale-110"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC05t92Of3xlgvSkszhnaHwIlu7JgeE3sdYVHCJQWr9hbN2Iu7D0Vu7sPSYxnfjJAI9MO3o5VXI2C1sLqx9U3ObLMxFvGV1mRbQsyAJB0JaqCrFInImDygYlWL5OVGg8EVjI0P8OaHxho5t2wrkzYRFAj1mpK6avwXNc7PqQR1ka-FohF0adpRzq1ylSU4EGkXUNteq_NQBIrFPJ8atrH_u4y-g9AF6Ugg2EhbUgmU3DYneoRW_XbKoj8kkuti8dRRbx8GdZEkE6_UV" />
+            <div
+                class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                <i class="fab fa-instagram text-white text-2xl"></i>
+            </div>
+        </div>
+        <div class="relative group h-full overflow-hidden">
+            <img alt="Gallery Image 4" class="w-full h-full object-cover transition duration-500 group-hover:scale-110"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxKB21Bhy01jOT5wpTYVj_XyGv0OSA1S9W0ctcIpuCCrHwujzQKb2GKCCyTt2-D5Hg8lI0ZbfEk3sQb8BoQsD8wbRskXuEsiBJKsE4D4jmI-2JmAb1mog7boDGFWI90g9mc0zg6EDB24QBgn5NHafJsueBXZtIOWxa7RoqeQqqgek8YqHhLb0ZjlRBj5hyGWuVlehlsHTmZkBkDXvEmBOShvIpa6x2h27KdyOvjIHwhl1LvYUnYo2U6j0IhZ8hwEfNSwlrgW2WpTeS" />
+            <div
+                class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                <i class="fab fa-instagram text-white text-2xl"></i>
+            </div>
+        </div>
+        <div class="relative group h-full overflow-hidden">
+            <img alt="Gallery Image 5" class="w-full h-full object-cover transition duration-500 group-hover:scale-110"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiFZQIIop8KzscpR2buVu5LQJ79HT-XU1tz9cWMJuTTAKZ-jvKEoUKasfChUFM2bxozjeH4JjbBIAHXdGn6r0Tfka6CBGIi6CJVBagdd8wMCeZkOSv7Ch1K4ndbjwjsN1FzYEb_eQ94buDUEPA3gTPATF9pwqpaWoHoA6IWRfb2tlGjVG_thR_S-zn54wqMd-Wla4uq_1craco6USIRj9Wxn4U-s0eqr3JbZthvNbOLJTEcLgUSqxqw4tvtl-fQJERYwmcXYJVnXPu" />
+            <div
+                class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                <i class="fab fa-instagram text-white text-2xl"></i>
+            </div>
+        </div>
+        <div class="relative group h-full overflow-hidden">
+            <img alt="Gallery Image 6" class="w-full h-full object-cover transition duration-500 group-hover:scale-110"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSbm3Z-30_Z6rFJ8kSKl5YkDgN2u-duTX0PVW500wAOEn6BBkaZgUB-PSGqMniqsJA7lgWeOsIaVPRJpOtRx33tgQYXAUpeL-P8G_P11Um1aqwziKVYQFJcjNaleSaRL7uOi_4Geycgz6IwNHiJGUIbJkQKrIHaL60oxxkttz7f4tGzMJI74HAs1oKlBD0egS5VorwCO70HzMKidQGEM_GHcgwJhYK46FWQWIKBUJI01cpgumZhy4DgN4CfswauPFk1sZL681egWo_" />
+            <div
+                class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                <i class="fab fa-instagram text-white text-2xl"></i>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-background-dark text-white pt-20 pb-10 border-t border-gray-800" id="contact">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <div class="space-y-6">
+                    <a class="flex items-center gap-2 group" href="#">
+                        <img src="elmo logo (1).jpg" alt="Elmo's Auto Detailing"
+                            class="w-10 h-10 object-contain rounded-full">
+                        <div class="flex flex-col">
+                            <span class="font-bold text-lg leading-none uppercase tracking-wide">Elmo's</span>
+                            <span class="text-[10px] text-primary font-bold uppercase tracking-[0.2em]">Auto
+                                Detailing</span>
+                        </div>
+                    </a>
+                    <p class="text-sm text-gray-400 leading-relaxed">
+                        At Elmo's Auto Detailing, we're dedicated to providing professional, high-quality car detailing
+                        services. From routine washes to ceramic coatings, we protect your investment.
+                    </p>
+                    <div class="flex gap-4">
+                        <a class="w-8 h-8 rounded bg-surface-dark flex items-center justify-center hover:bg-primary transition"
+                            href="#"><i class="fab fa-facebook-f text-sm"></i></a>
+                        <a class="w-8 h-8 rounded bg-surface-dark flex items-center justify-center hover:bg-primary transition"
+                            href="#"><i class="fab fa-twitter text-sm"></i></a>
+                        <a class="w-8 h-8 rounded bg-surface-dark flex items-center justify-center hover:bg-primary transition"
+                            href="#"><i class="fab fa-instagram text-sm"></i></a>
+                        <a class="w-8 h-8 rounded bg-surface-dark flex items-center justify-center hover:bg-primary transition"
+                            href="#"><i class="fab fa-whatsapp text-sm"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-6">Company</h4>
+                    <ul class="space-y-4 text-sm text-gray-400">
+                        <li><a class="hover:text-primary transition" href="#">Home</a></li>
+                        <li><a class="hover:text-primary transition" href="#gallery">Gallery</a></li>
+                        <li><a class="hover:text-primary transition" href="#about">About Us</a></li>
+                        <li><a class="hover:text-primary transition" href="#">Blog</a></li>
+                        <li><a class="hover:text-primary transition" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-6">Our Service</h4>
+                    <ul class="space-y-4 text-sm text-gray-400">
+                        <li><a class="hover:text-primary transition" href="#">Exterior Hand Wash &amp; Wax</a></li>
+                        <li><a class="hover:text-primary transition" href="#">Paint Correction</a></li>
+                        <li><a class="hover:text-primary transition" href="#">Interior Deep Cleaning</a></li>
+                        <li><a class="hover:text-primary transition" href="#">Ceramic Coating Protection</a></li>
+                        <li><a class="hover:text-primary transition" href="#">Headlight Restoration</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-6">Contact Us</h4>
+                    <ul class="space-y-6 text-sm text-gray-400">
+                        <li class="flex gap-4">
+                            <i class="fas fa-map-marker-alt text-primary mt-1"></i>
+                            <div>
+                                <strong class="text-white block mb-1">Head Office</strong>
+                                Newburgh, NY & (surrounding area)
+                            </div>
+                        </li>
+                        <li class="flex gap-4">
+                            <i class="fas fa-phone-alt text-primary mt-1"></i>
+                            <div>
+                                <strong class="text-white block mb-1">Call Us</strong>
+                                845-597-0995
+                            </div>
+                        </li>
+                        <li class="flex gap-4">
+                            <i class="fas fa-envelope text-primary mt-1"></i>
+                            <div>
+                                <strong class="text-white block mb-1">Email Us</strong>
+                                contact@elmosautodetailing.com
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
+                <p>© 2026 - Elmo's Auto Detailing. All Rights Reserved.</p>
+                <div class="flex gap-6">
+                    <a class="hover:text-white transition" href="#">Terms &amp; Conditions</a>
+                    <a class="hover:text-white transition" href="#">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <a class="fixed bottom-6 right-6 md:hidden z-50 bg-primary text-white w-14 h-14 rounded-full shadow-lg flex items-center justify-center animate-bounce"
+        href="https://maps.google.com/?q=Classic+Detailers+Islamabad" target="_blank">
+        <i class="fas fa-location-arrow text-xl"></i>
+    </a>
+
+</body>
+
+</html>
