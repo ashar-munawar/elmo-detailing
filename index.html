@@ -93,6 +93,55 @@
             -webkit-text-fill-color: transparent;
             animation: shimmer 3s linear infinite;
         }
+
+        /* Reveal Animations */
+        .reveal {
+            opacity: 0;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            will-change: transform, opacity;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translate(0, 0) scale(1) !important;
+        }
+
+        .reveal-up {
+            transform: translateY(20px);
+        }
+
+        .reveal-left {
+            transform: translateX(-20px);
+        }
+
+        .reveal-right {
+            transform: translateX(20px);
+        }
+
+        .reveal-zoom {
+            transform: scale(0.98);
+        }
+
+        /* Stagger delays */
+        .delay-100 {
+            transition-delay: 100ms;
+        }
+
+        .delay-200 {
+            transition-delay: 200ms;
+        }
+
+        .delay-300 {
+            transition-delay: 300ms;
+        }
+
+        .delay-400 {
+            transition-delay: 400ms;
+        }
+
+        .delay-500 {
+            transition-delay: 500ms;
+        }
     </style>
 </head>
 
@@ -184,7 +233,7 @@
     </header>
     <section class="py-20 bg-surface-light dark:bg-surface-dark" id="services">
         <div class="container mx-auto px-6">
-            <div class="text-center max-w-2xl mx-auto mb-16">
+            <div class="text-center max-w-2xl mx-auto mb-16 reveal reveal-up">
                 <span class="text-accent uppercase font-bold text-xs tracking-[0.2em]">Our Expertise</span>
                 <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">Premium Car Detailing</h2>
                 <p class="text-muted-light dark:text-muted-dark">
@@ -194,7 +243,7 @@
             </div>
             <div class="grid md:grid-cols-2 gap-6">
                 <div
-                    class="group relative bg-background-light dark:bg-background-dark rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition flex flex-col sm:flex-row h-full">
+                    class="group relative bg-background-light dark:bg-background-dark rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition flex flex-col sm:flex-row h-full reveal reveal-up delay-100">
                     <div class="p-8 flex-1 flex flex-col justify-center relative">
                         <span
                             class="absolute top-4 left-6 text-6xl font-black text-gray-200 dark:text-gray-800/50 -z-0 select-none">01</span>
@@ -214,7 +263,7 @@
                     </div>
                 </div>
                 <div
-                    class="group relative bg-background-light dark:bg-background-dark rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition flex flex-col sm:flex-row h-full">
+                    class="group relative bg-background-light dark:bg-background-dark rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition flex flex-col sm:flex-row h-full reveal reveal-up delay-200">
                     <div class="p-8 flex-1 flex flex-col justify-center relative">
                         <span
                             class="absolute top-4 left-6 text-6xl font-black text-gray-200 dark:text-gray-800/50 -z-0 select-none">02</span>
@@ -234,7 +283,7 @@
                     </div>
                 </div>
                 <div
-                    class="group relative bg-background-light dark:bg-background-dark rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition flex flex-col sm:flex-row h-full">
+                    class="group relative bg-background-light dark:bg-background-dark rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition flex flex-col sm:flex-row h-full reveal reveal-up delay-300">
                     <div class="p-8 flex-1 flex flex-col justify-center relative">
                         <span
                             class="absolute top-4 left-6 text-6xl font-black text-gray-200 dark:text-gray-800/50 -z-0 select-none">03</span>
@@ -254,7 +303,7 @@
                     </div>
                 </div>
                 <div
-                    class="group relative bg-background-light dark:bg-background-dark rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition flex flex-col sm:flex-row h-full">
+                    class="group relative bg-background-light dark:bg-background-dark rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition flex flex-col sm:flex-row h-full reveal reveal-up delay-100">
                     <div class="p-8 flex-1 flex flex-col justify-center relative">
                         <span
                             class="absolute top-4 left-6 text-6xl font-black text-gray-200 dark:text-gray-800/50 -z-0 select-none">04</span>
@@ -274,7 +323,7 @@
                     </div>
                 </div>
                 <div
-                    class="group relative bg-background-light dark:bg-background-dark rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition flex flex-col sm:flex-row h-full">
+                    class="group relative bg-background-light dark:bg-background-dark rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition flex flex-col sm:flex-row h-full reveal reveal-up delay-200">
                     <div class="p-8 flex-1 flex flex-col justify-center relative">
                         <span
                             class="absolute top-4 left-6 text-6xl font-black text-gray-200 dark:text-gray-800/50 -z-0 select-none">05</span>
@@ -294,7 +343,7 @@
                     </div>
                 </div>
                 <div
-                    class="group relative bg-background-light dark:bg-background-dark rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition flex flex-col sm:flex-row h-full">
+                    class="group relative bg-background-light dark:bg-background-dark rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition flex flex-col sm:flex-row h-full reveal reveal-up delay-300">
                     <div class="p-8 flex-1 flex flex-col justify-center relative">
                         <span
                             class="absolute top-4 left-6 text-6xl font-black text-gray-200 dark:text-gray-800/50 -z-0 select-none">06</span>
@@ -320,13 +369,13 @@
     <section class="py-20 bg-background-light dark:bg-background-dark overflow-hidden" id="about">
         <div class="container mx-auto px-6">
             <div class="grid lg:grid-cols-2 gap-16 items-center">
-                <div class="relative min-h-[500px] h-full rounded-2xl overflow-hidden shadow-2xl">
+                <div class="relative min-h-[500px] h-full rounded-2xl overflow-hidden shadow-2xl reveal reveal-left">
                     <img alt="Car Being Detailed" class="w-full h-full object-cover"
                         src="https://lh3.googleusercontent.com/aida-public/AB6AXuDksMeJX24uq-r5x07jMJEFV1WcJVrRdzr6rFx1mUR4S5R73HtTExHuyRJENFmNRf8uHQqsnCpMT-Z8g12IzD84FnkijVxJvTECmj2zYxgilBx44ZhQRnyOEPvdbrUHXh1wkT_C0_kFsgh8bLfp3Til6DZd-hD1_fnjvGYhB-Dr5WdAeTOQQnRNQmaiu-3it2WrbLNt_xQNUkEUq2QoI0rQuPiTj5xRv_kG01mOlnf3yVd_DD630ofq-_cT_8sXspju22HqnWkZKl8C" />
                     <div class="absolute inset-0 bg-primary/10 mix-blend-overlay">
                     </div>
                 </div>
-                <div class="space-y-8">
+                <div class="space-y-8 reveal reveal-right">
                     <div>
                         <span class="text-accent uppercase font-bold text-xs tracking-[0.2em] mb-2 block">About Elmo's
                             Auto Detailing</span>
@@ -342,25 +391,25 @@
                         href="#contact">Read More</a>
                     <div
                         class="grid grid-cols-2 md:grid-cols-4 gap-8 pt-8 border-t border-gray-200 dark:border-gray-800">
-                        <div class="text-center">
+                        <div class="text-center reveal reveal-up delay-100">
                             <div class="text-accent text-2xl mb-2"><i class="fas fa-briefcase"></i></div>
                             <div class="text-2xl font-bold">1200+</div>
                             <div class="text-xs text-muted-light dark:text-muted-dark uppercase tracking-wide">Jobs Done
                             </div>
                         </div>
-                        <div class="text-center">
+                        <div class="text-center reveal reveal-up delay-200">
                             <div class="text-accent text-2xl mb-2"><i class="fas fa-thumbs-up"></i></div>
                             <div class="text-2xl font-bold">950+</div>
                             <div class="text-xs text-muted-light dark:text-muted-dark uppercase tracking-wide">Happy
                                 Clients</div>
                         </div>
-                        <div class="text-center">
+                        <div class="text-center reveal reveal-up delay-300">
                             <div class="text-accent text-2xl mb-2"><i class="fas fa-users"></i></div>
                             <div class="text-2xl font-bold">10+</div>
                             <div class="text-xs text-muted-light dark:text-muted-dark uppercase tracking-wide">Experts
                             </div>
                         </div>
-                        <div class="text-center">
+                        <div class="text-center reveal reveal-up delay-400">
                             <div class="text-accent text-2xl mb-2"><i class="fas fa-award"></i></div>
                             <div class="text-2xl font-bold">5+</div>
                             <div class="text-xs text-muted-light dark:text-muted-dark uppercase tracking-wide">Years
@@ -374,7 +423,7 @@
     <section class="py-20 bg-surface-light dark:bg-surface-dark">
         <div class="container mx-auto px-6">
             <div class="grid lg:grid-cols-3 gap-12 items-start">
-                <div class="lg:col-span-1">
+                <div class="lg:col-span-1 reveal reveal-left">
                     <span class="text-accent uppercase font-bold text-xs tracking-[0.2em]">Testimonials</span>
                     <h2 class="text-4xl font-bold mt-2 mb-6">What They Say</h2>
                     <p class="text-muted-light dark:text-muted-dark mb-8">
@@ -389,7 +438,7 @@
                 </div>
                 <div class="lg:col-span-2 grid md:grid-cols-2 gap-6">
                     <div
-                        class="bg-background-light dark:bg-background-dark p-8 rounded-xl shadow-lg border border-gray-100 dark:border-gray-800">
+                        class="bg-background-light dark:bg-background-dark p-8 rounded-xl shadow-lg border border-gray-100 dark:border-gray-800 reveal reveal-up delay-100">
                         <div class="flex justify-between items-start mb-6">
                             <div class="flex items-center gap-3">
                                 <div
@@ -415,7 +464,7 @@
                         </p>
                     </div>
                     <div
-                        class="bg-background-light dark:bg-background-dark p-8 rounded-xl shadow-lg border border-gray-100 dark:border-gray-800">
+                        class="bg-background-light dark:bg-background-dark p-8 rounded-xl shadow-lg border border-gray-100 dark:border-gray-800 reveal reveal-up delay-200">
                         <div class="flex justify-between items-start mb-6">
                             <div class="flex items-center gap-3">
                                 <div
@@ -445,7 +494,8 @@
         </div>
     </section>
     <div class="bg-primary py-12">
-        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+        <div
+            class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6 reveal reveal-up">
             <h2 class="text-2xl md:text-3xl font-bold text-white text-center md:text-left">
                 Want your car to shine like new again?
             </h2>
@@ -457,7 +507,7 @@
     </div>
     <section class="py-20 bg-surface-light dark:bg-surface-dark" id="gallery">
         <div class="container mx-auto px-6">
-            <div class="text-center max-w-2xl mx-auto mb-16">
+            <div class="text-center max-w-2xl mx-auto mb-16 reveal reveal-up">
                 <span class="text-primary uppercase font-bold text-xs tracking-[0.2em]">Our Portfolio</span>
                 <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">Work Gallery</h2>
                 <p class="text-muted-light dark:text-muted-dark">
@@ -465,31 +515,36 @@
                 </p>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="relative group aspect-video overflow-hidden rounded-xl shadow-lg">
+                <div class="relative group aspect-video overflow-hidden rounded-xl shadow-lg reveal reveal-zoom">
                     <img alt="Car Wash" class="w-full h-full object-cover transition duration-500 group-hover:scale-110"
                         src="./photos/Screenshot 2026-02-14 111820.png" />
                 </div>
-                <div class="relative group aspect-video overflow-hidden rounded-xl shadow-lg">
+                <div
+                    class="relative group aspect-video overflow-hidden rounded-xl shadow-lg reveal reveal-zoom delay-100">
                     <img alt="Wheel Detailing"
                         class="w-full h-full object-cover transition duration-500 group-hover:scale-110"
                         src="https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?auto=format&fit=crop&q=80&w=800" />
                 </div>
-                <div class="relative group aspect-video overflow-hidden rounded-xl shadow-lg">
+                <div
+                    class="relative group aspect-video overflow-hidden rounded-xl shadow-lg reveal reveal-zoom delay-200">
                     <img alt="Car Polishing"
                         class="w-full h-full object-cover transition duration-500 group-hover:scale-110"
                         src="./photos/car polish.png" />
                 </div>
-                <div class="relative group aspect-video overflow-hidden rounded-xl shadow-lg">
+                <div
+                    class="relative group aspect-video overflow-hidden rounded-xl shadow-lg reveal reveal-zoom delay-300">
                     <img alt="Interior Detailing"
                         class="w-full h-full object-cover transition duration-500 group-hover:scale-110"
                         src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&q=80&w=800" />
                 </div>
-                <div class="relative group aspect-video overflow-hidden rounded-xl shadow-lg">
+                <div
+                    class="relative group aspect-video overflow-hidden rounded-xl shadow-lg reveal reveal-zoom delay-400">
                     <img alt="Foam Wash"
                         class="w-full h-full object-cover transition duration-500 group-hover:scale-110"
                         src="./photos/foam wash.png" />
                 </div>
-                <div class="relative group aspect-video overflow-hidden rounded-xl shadow-lg">
+                <div
+                    class="relative group aspect-video overflow-hidden rounded-xl shadow-lg reveal reveal-zoom delay-500">
                     <img alt="Ceramic Coating"
                         class="w-full h-full object-cover transition duration-500 group-hover:scale-110"
                         src="https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&fit=crop&q=80&w=800" />
@@ -500,7 +555,7 @@
 
     <section class="py-20 bg-background-light dark:bg-background-dark">
         <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
+            <div class="text-center mb-16 reveal reveal-up">
                 <span class="text-accent uppercase font-bold text-xs tracking-[0.2em]">Trusted &amp; Affordable</span>
                 <h2 class="text-3xl md:text-4xl font-bold mt-2">Why Choose Our Car Detailing?</h2>
                 <p class="text-muted-light dark:text-muted-dark mt-4 max-w-2xl mx-auto">
@@ -509,31 +564,31 @@
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div
-                    class="p-6 bg-surface-light dark:bg-surface-dark rounded-xl border border-gray-100 dark:border-gray-800">
+                    class="p-6 bg-surface-light dark:bg-surface-dark rounded-xl border border-gray-100 dark:border-gray-800 reveal reveal-up delay-100">
                     <h3 class="font-bold text-lg mb-2">Expert Technicians</h3>
                     <p class="text-sm text-muted-light dark:text-muted-dark">Our detailers are skilled professionals
                         with years of experience in car care.</p>
                 </div>
                 <div
-                    class="p-6 bg-surface-light dark:bg-surface-dark rounded-xl border border-gray-100 dark:border-gray-800">
+                    class="p-6 bg-surface-light dark:bg-surface-dark rounded-xl border border-gray-100 dark:border-gray-800 reveal reveal-up delay-200">
                     <h3 class="font-bold text-lg mb-2">Tailored Packages</h3>
                     <p class="text-sm text-muted-light dark:text-muted-dark">Detailing options customized to your car's
                         condition and your preferences.</p>
                 </div>
                 <div
-                    class="p-6 bg-surface-light dark:bg-surface-dark rounded-xl border border-gray-100 dark:border-gray-800">
+                    class="p-6 bg-surface-light dark:bg-surface-dark rounded-xl border border-gray-100 dark:border-gray-800 reveal reveal-up delay-300">
                     <h3 class="font-bold text-lg mb-2">Affordable Pricing</h3>
                     <p class="text-sm text-muted-light dark:text-muted-dark">Competitive rates with no hidden fees -
                         quality service that fits your budget.</p>
                 </div>
                 <div
-                    class="p-6 bg-surface-light dark:bg-surface-dark rounded-xl border border-gray-100 dark:border-gray-800">
+                    class="p-6 bg-surface-light dark:bg-surface-dark rounded-xl border border-gray-100 dark:border-gray-800 reveal reveal-up delay-400">
                     <h3 class="font-bold text-lg mb-2">Aftercare Support</h3>
                     <p class="text-sm text-muted-light dark:text-muted-dark">We provide post-service tips and care
                         advice to keep your car looking sharp.</p>
                 </div>
             </div>
-            <div class="mt-16 rounded-xl overflow-hidden shadow-2xl relative h-64 md:h-96">
+            <div class="mt-16 rounded-xl overflow-hidden shadow-2xl relative h-64 md:h-96 reveal reveal-up">
                 <div
                     class="absolute inset-0 bg-gradient-to-t from-background-light dark:from-background-dark to-transparent z-10">
                 </div>
@@ -544,12 +599,12 @@
     </section>
     <section class="py-20 bg-surface-light dark:bg-surface-dark border-t border-gray-200 dark:border-gray-800">
         <div class="container mx-auto px-6 grid lg:grid-cols-2 gap-12">
-            <div>
+            <div class="reveal reveal-left">
                 <span class="text-accent uppercase font-bold text-xs tracking-[0.2em] mb-4 block">Everything you need
                     to know</span>
                 <h2 class="text-4xl font-bold">Frequently Asked Questions</h2>
             </div>
-            <div class="space-y-4">
+            <div class="space-y-4 reveal reveal-right">
                 <details
                     class="group bg-background-light dark:bg-background-dark p-6 rounded-lg border border-gray-200 dark:border-gray-700 cursor-pointer"
                     open="">
@@ -595,7 +650,7 @@
     <footer class="bg-background-dark text-white pt-20 pb-10 border-t border-gray-800" id="contact">
         <div class="container mx-auto px-6">
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-                <div class="space-y-6">
+                <div class="space-y-6 reveal reveal-up delay-100">
                     <a class="flex items-center gap-2 group" href="#">
                         <img src="./photos/elmo logo (1).jpg" alt="Elmo's Auto Detailing"
                             class="w-10 h-10 object-contain rounded-full">
@@ -620,7 +675,7 @@
                             href="#"><i class="fab fa-whatsapp text-sm"></i></a>
                     </div>
                 </div>
-                <div>
+                <div class="reveal reveal-up delay-200">
                     <h4 class="font-bold text-lg mb-6">Company</h4>
                     <ul class="space-y-4 text-sm text-gray-400">
                         <li><a class="hover:text-accent transition" href="#">Home</a></li>
@@ -630,7 +685,7 @@
                         <li><a class="hover:text-accent transition" href="#contact">Contact</a></li>
                     </ul>
                 </div>
-                <div>
+                <div class="reveal reveal-up delay-300">
                     <h4 class="font-bold text-lg mb-6">Our Service</h4>
                     <ul class="space-y-4 text-sm text-gray-400">
                         <li><a class="hover:text-accent transition" href="#">Exterior Hand Wash &amp; Wax</a></li>
@@ -640,7 +695,7 @@
                         <li><a class="hover:text-accent transition" href="#">Headlight Restoration</a></li>
                     </ul>
                 </div>
-                <div>
+                <div class="reveal reveal-up delay-400">
                     <h4 class="font-bold text-lg mb-6">Contact Us</h4>
                     <ul class="space-y-6 text-sm text-gray-400">
                         <li class="flex gap-4">
@@ -682,6 +737,26 @@
         <i class="fas fa-location-arrow text-xl"></i>
     </a>
 
+    <script>
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -20px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    // Once animated, no need to observe anymore
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        window.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        });
+    </script>
 </body>
 
 </html>
