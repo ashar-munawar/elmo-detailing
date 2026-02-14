@@ -17,8 +17,8 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: "#FCBF65", // Gold/Orange
-                        "primary-hover": "#FCCD75", // Ligher shade
+                        primary: "#C29051", // Gold/Bronze
+                        "primary-hover": "#D4A062", // Lighter shade
                         "background-light": "#FFFFFF",
                         "background-dark": "#0B0B0B", // Deep black
                         "surface-light": "#F3F4F6",
@@ -123,7 +123,7 @@
         </div>
     </nav>
     <header
-        class="relative overflow-hidden pt-32 pb-32 lg:pt-48 lg:pb-48 bg-[url('photos/mclaren.jpeg')] bg-cover bg-center bg-no-repeat bg-fixed">
+        class="relative overflow-hidden pt-32 pb-32 lg:pt-48 lg:pb-48 bg-[url('./photos/mclaren.jpeg')] bg-cover bg-center bg-no-repeat bg-fixed">
         <div class="absolute inset-0 bg-black/70 z-0"></div>
         <div class="container mx-auto px-6 relative z-10">
             <div class="max-w-3xl">
@@ -431,6 +431,74 @@
             </a>
         </div>
     </div>
+    <section class="py-20 bg-surface-light dark:bg-surface-dark" id="gallery">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-primary uppercase font-bold text-xs tracking-[0.2em]">Our Portfolio</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">Work Gallery</h2>
+                <p class="text-muted-light dark:text-muted-dark">
+                    Explore some of our recent detailing projects and see the precision we bring to every vehicle.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="relative group aspect-video overflow-hidden rounded-xl shadow-lg">
+                    <img alt="Gallery Image 1"
+                        class="w-full h-full object-cover transition duration-500 group-hover:scale-110"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8l70KcKkbE99WItyY3JCtt0UcCua4ITLltJdRf9kdPwYTkb-ZulfMBbKdSo9gBiB9ArMzSyuXrhiLCWLYBMAEyjzOZWZ4YPW8k-lt1f3X6Gpf8P0szT79eZt-4Bu_ffT-3hb9d2lqL5ZgpjM1RCB0JrFbaq1k1CBtB08pE1_T_gBHvelnKr60FZYXau4VkcaLu0hyZqjHZTnzi0NmHVzpLzrHEd7iZyUZagGLZbC-TYtd-kl0L1x9BFfBjviI0unu8UShaAdz58Qt" />
+                    <div
+                        class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                        <i class="fab fa-instagram text-white text-3xl"></i>
+                    </div>
+                </div>
+                <div class="relative group aspect-video overflow-hidden rounded-xl shadow-lg">
+                    <img alt="Gallery Image 2"
+                        class="w-full h-full object-cover transition duration-500 group-hover:scale-110"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuArCvu4kabREb2IeGTKA_GtTeLrz8-3UaHRGr1BcbwZttqd4kkbo4mHpt86uxf5gJkgPpK77TqBkXxvNh9iF0vmw_Of-o53AGqGd681RU4ZZMu6saESTdBQkTgF3a4WDyb1Rxj2WaC9n6CjdpopZvgByhzv37RliiXzHWUEk3QQquOMHnsOVfjKpxpuoNgm0HRvzqFR3alp5Q17XZArBNuqYtyozJ_VFDCReV3vjsSStSbjSY8NDZAw88i4PLAtx6bxMlBCVbqYzxIr" />
+                    <div
+                        class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                        <i class="fab fa-instagram text-white text-3xl"></i>
+                    </div>
+                </div>
+                <div class="relative group aspect-video overflow-hidden rounded-xl shadow-lg">
+                    <img alt="Gallery Image 3"
+                        class="w-full h-full object-cover transition duration-500 group-hover:scale-110"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuC05t92Of3xlgvSkszhnaHwIlu7JgeE3sdYVHCJQWr9hbN2Iu7D0Vu7sPSYxnfjJAI9MO3o5VXI2C1sLqx9U3ObLMxFvGV1mRbQsyAJB0JaqCrFInImDygYlWL5OVGg8EVjI0P8OaHxho5t2wrkzYRFAj1mpK6avwXNc7PqQR1ka-FohF0adpRzq1ylSU4EGkXUNteq_NQBIrFPJ8atrH_u4y-g9AF6Ugg2EhbUgmU3DYneoRW_XbKoj8kkuti8dRRbx8GdZEkE6_UV" />
+                    <div
+                        class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                        <i class="fab fa-instagram text-white text-3xl"></i>
+                    </div>
+                </div>
+                <div class="relative group aspect-video overflow-hidden rounded-xl shadow-lg">
+                    <img alt="Gallery Image 4"
+                        class="w-full h-full object-cover transition duration-500 group-hover:scale-110"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxKB21Bhy01jOT5wpTYVj_XyGv0OSA1S9W0ctcIpuCCrHwujzQKb2GKCCyTt2-D5Hg8lI0ZbfEk3sQb8BoQsD8wbRskXuEsiBJKsE4D4jmI-2JmAb1mog7boDGFWI90g9mc0zg6EDB24QBgn5NHafJsueBXZtIOWxa7RoqeQqqgek8YqHhLb0ZjlRBj5hyGWuVlehlsHTmZkBkDXvEmBOShvIpa6x2h27KdyOvjIHwhl1LvYUnYo2U6j0IhZ8hwEfNSwlrgW2WpTeS" />
+                    <div
+                        class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                        <i class="fab fa-instagram text-white text-3xl"></i>
+                    </div>
+                </div>
+                <div class="relative group aspect-video overflow-hidden rounded-xl shadow-lg">
+                    <img alt="Gallery Image 5"
+                        class="w-full h-full object-cover transition duration-500 group-hover:scale-110"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiFZQIIop8KzscpR2buVu5LQJ79HT-XU1tz9cWMJuTTAKZ-jvKEoUKasfChUFM2bxozjeH4JjbBIAHXdGn6r0Tfka6CBGIi6CJVBagdd8wMCeZkOSv7Ch1K4ndbjwjsN1FzYEb_eQ94buDUEPA3gTPATF9pwqpaWoHoA6IWRfb2tlGjVG_thR_S-zn54wqMd-Wla4uq_1craco6USIRj9Wxn4U-s0eqr3JbZthvNbOLJTEcLgUSqxqw4tvtl-fQJERYwmcXYJVnXPu" />
+                    <div
+                        class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                        <i class="fab fa-instagram text-white text-3xl"></i>
+                    </div>
+                </div>
+                <div class="relative group aspect-video overflow-hidden rounded-xl shadow-lg">
+                    <img alt="Gallery Image 6"
+                        class="w-full h-full object-cover transition duration-500 group-hover:scale-110"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSbm3Z-30_Z6rFJ8kSKl5YkDgN2u-duTX0PVW500wAOEn6BBkaZgUB-PSGqMniqsJA7lgWeOsIaVPRJpOtRx33tgQYXAUpeL-P8G_P11Um1aqwziKVYQFJcjNaleSaRL7uOi_4Geycgz6IwNHiJGUIbJkQKrIHaL60oxxkttz7f4tGzMJI74HAs1oKlBD0egS5VorwCO70HzMKidQGEM_GHcgwJhYK46FWQWIKBUJI01cpgumZhy4DgN4CfswauPFk1sZL681egWo_" />
+                    <div
+                        class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                        <i class="fab fa-instagram text-white text-3xl"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="py-20 bg-background-light dark:bg-background-dark">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
@@ -524,56 +592,7 @@
             </div>
         </div>
     </section>
-    <section class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 h-48" id="gallery">
-        <div class="relative group h-full overflow-hidden">
-            <img alt="Gallery Image 1" class="w-full h-full object-cover transition duration-500 group-hover:scale-110"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8l70KcKkbE99WItyY3JCtt0UcCua4ITLltJdRf9kdPwYTkb-ZulfMBbKdSo9gBiB9ArMzSyuXrhiLCWLYBMAEyjzOZWZ4YPW8k-lt1f3X6Gpf8P0szT79eZt-4Bu_ffT-3hb9d2lqL5ZgpjM1RCB0JrFbaq1k1CBtB08pE1_T_gBHvelnKr60FZYXau4VkcaLu0hyZqjHZTnzi0NmHVzpLzrHEd7iZyUZagGLZbC-TYtd-kl0L1x9BFfBjviI0unu8UShaAdz58Qt" />
-            <div
-                class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
-                <i class="fab fa-instagram text-white text-2xl"></i>
-            </div>
-        </div>
-        <div class="relative group h-full overflow-hidden">
-            <img alt="Gallery Image 2" class="w-full h-full object-cover transition duration-500 group-hover:scale-110"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuArCvu4kabREb2IeGTKA_GtTeLrz8-3UaHRGr1BcbwZttqd4kkbo4mHpt86uxf5gJkgPpK77TqBkXxvNh9iF0vmw_Of-o53AGqGd681RU4ZZMu6saESTdBQkTgF3a4WDyb1Rxj2WaC9n6CjdpopZvgByhzv37RliiXzHWUEk3QQquOMHnsOVfjKpxpuoNgm0HRvzqFR3alp5Q17XZArBNuqYtyozJ_VFDCReV3vjsSStSbjSY8NDZAw88i4PLAtx6bxMlBCVbqYzxIr" />
-            <div
-                class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
-                <i class="fab fa-instagram text-white text-2xl"></i>
-            </div>
-        </div>
-        <div class="relative group h-full overflow-hidden">
-            <img alt="Gallery Image 3" class="w-full h-full object-cover transition duration-500 group-hover:scale-110"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC05t92Of3xlgvSkszhnaHwIlu7JgeE3sdYVHCJQWr9hbN2Iu7D0Vu7sPSYxnfjJAI9MO3o5VXI2C1sLqx9U3ObLMxFvGV1mRbQsyAJB0JaqCrFInImDygYlWL5OVGg8EVjI0P8OaHxho5t2wrkzYRFAj1mpK6avwXNc7PqQR1ka-FohF0adpRzq1ylSU4EGkXUNteq_NQBIrFPJ8atrH_u4y-g9AF6Ugg2EhbUgmU3DYneoRW_XbKoj8kkuti8dRRbx8GdZEkE6_UV" />
-            <div
-                class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
-                <i class="fab fa-instagram text-white text-2xl"></i>
-            </div>
-        </div>
-        <div class="relative group h-full overflow-hidden">
-            <img alt="Gallery Image 4" class="w-full h-full object-cover transition duration-500 group-hover:scale-110"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxKB21Bhy01jOT5wpTYVj_XyGv0OSA1S9W0ctcIpuCCrHwujzQKb2GKCCyTt2-D5Hg8lI0ZbfEk3sQb8BoQsD8wbRskXuEsiBJKsE4D4jmI-2JmAb1mog7boDGFWI90g9mc0zg6EDB24QBgn5NHafJsueBXZtIOWxa7RoqeQqqgek8YqHhLb0ZjlRBj5hyGWuVlehlsHTmZkBkDXvEmBOShvIpa6x2h27KdyOvjIHwhl1LvYUnYo2U6j0IhZ8hwEfNSwlrgW2WpTeS" />
-            <div
-                class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
-                <i class="fab fa-instagram text-white text-2xl"></i>
-            </div>
-        </div>
-        <div class="relative group h-full overflow-hidden">
-            <img alt="Gallery Image 5" class="w-full h-full object-cover transition duration-500 group-hover:scale-110"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiFZQIIop8KzscpR2buVu5LQJ79HT-XU1tz9cWMJuTTAKZ-jvKEoUKasfChUFM2bxozjeH4JjbBIAHXdGn6r0Tfka6CBGIi6CJVBagdd8wMCeZkOSv7Ch1K4ndbjwjsN1FzYEb_eQ94buDUEPA3gTPATF9pwqpaWoHoA6IWRfb2tlGjVG_thR_S-zn54wqMd-Wla4uq_1craco6USIRj9Wxn4U-s0eqr3JbZthvNbOLJTEcLgUSqxqw4tvtl-fQJERYwmcXYJVnXPu" />
-            <div
-                class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
-                <i class="fab fa-instagram text-white text-2xl"></i>
-            </div>
-        </div>
-        <div class="relative group h-full overflow-hidden">
-            <img alt="Gallery Image 6" class="w-full h-full object-cover transition duration-500 group-hover:scale-110"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSbm3Z-30_Z6rFJ8kSKl5YkDgN2u-duTX0PVW500wAOEn6BBkaZgUB-PSGqMniqsJA7lgWeOsIaVPRJpOtRx33tgQYXAUpeL-P8G_P11Um1aqwziKVYQFJcjNaleSaRL7uOi_4Geycgz6IwNHiJGUIbJkQKrIHaL60oxxkttz7f4tGzMJI74HAs1oKlBD0egS5VorwCO70HzMKidQGEM_GHcgwJhYK46FWQWIKBUJI01cpgumZhy4DgN4CfswauPFk1sZL681egWo_" />
-            <div
-                class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
-                <i class="fab fa-instagram text-white text-2xl"></i>
-            </div>
-        </div>
-    </section>
+
     <footer class="bg-background-dark text-white pt-20 pb-10 border-t border-gray-800" id="contact">
         <div class="container mx-auto px-6">
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
